@@ -56,12 +56,16 @@ func (w *widgets) SetState(s string) {
 	switch s {
 	case "running":
 		w.state.TextFgColor = ui.ColorGreen
+		w.desc.TextFgColor = ui.ColorYellow
 	case "sleep":
 		w.state.TextFgColor = ui.ColorYellow
+		w.desc.TextFgColor = ui.ColorGreen
 	case "IO wait":
 		w.state.TextFgColor = ui.ColorYellow
+		w.desc.TextFgColor = ui.ColorGreen
 	default:
 		w.state.TextFgColor = ui.ColorDefault
+		w.desc.TextFgColor = ui.ColorDefault
 	}
 	w.state.Text = s
 }
